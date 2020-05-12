@@ -10,10 +10,10 @@ var caracter1 = texto.split(".")
 var caracter2 =texto.split(",")
 var primerap=palabra [0].toUpperCase();
 var final = (JSON.parse(palabra.length)); 
+var mitad = (JSON.parse(palabra.length)/2); 
 var ultimap=palabra [final - 1].toUpperCase();
-
 var Total= primerap;
-console.log (primerap  ,  ultimap, );
+console.log (primerap  ,  ultimap, mitad );
 var final = (JSON.parse(caracter1.length));
 var total = final;
 console.log (total);
