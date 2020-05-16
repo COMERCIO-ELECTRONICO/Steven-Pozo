@@ -1,0 +1,12 @@
+<h1>COMPONENTE PADRE</h1>
+<label>Ingrese año</label><br><br>
+<input type="string" placeholder="de 1 a 2020" [(ngModel)]="valorDelInput">
+{{valorDelInput}}
+
+<br><br><label>Edad</label><br><br>
+<input type="number" placeholder="edad" [(ngModel)]="años">
+
+
+<app-hijo [valorDelPadre]="valorDelInput" [valorDelPadre2]="años" [edadC]="respuestaHijo" ($event)>
+</app-hijo>
+{{edad}}
