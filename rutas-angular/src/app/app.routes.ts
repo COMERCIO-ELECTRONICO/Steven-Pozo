@@ -1,12 +1,16 @@
-import { UsuarioRoutingModule } from './usuario/usuario-routing.module';
-import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './inicio/home/home.component';
 import { NoEncontradoComponent } from './inicio/no-encontrado/no-encontrado.component';
 import { LoginComponent } from './login/login.component';
+import { NgModule } from "@angular/core";
 const rutas: Routes = [
     {
-        path: 'inicio',
+        path: ':inicio',
+        component: HomeComponent
+
+    },
+    {
+        path: ':id/inicio',
         component: HomeComponent
 
     },
