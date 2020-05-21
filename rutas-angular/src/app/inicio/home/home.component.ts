@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
     this._router.navigate(['/usuario', 'listar']);
   }
   editarPokemon() {
-    this._router.navigate(['/pokemon', 'editarpokemon'])
+    this._router.navigate(['/pokemon', 'editarpokemon',])
   }
   crearPokemon() {
     this._router.navigate(['/pokemon', 'crearpokemon'])

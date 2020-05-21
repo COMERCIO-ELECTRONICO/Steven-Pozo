@@ -6,22 +6,22 @@ import { NgModule } from "@angular/core";
 const rutas: Routes = [
     {
         path: ':inicio',
-        component: HomeComponent
+        component: HomeComponent,
 
     },
     {
         path: ':id/inicio',
-        component: HomeComponent
+        component: HomeComponent,
 
     },
     {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
     },
     {
         path: 'usuario',
         loadChildren: () => import('./usuario/usuario.module')
-            .then(m => m.UsuarioModule)
+            .then(m => m.UsuarioModule),
     },
     {
         path: 'pokemon',
@@ -32,16 +32,18 @@ const rutas: Routes = [
     {
         path: '',
         redirectTo: 'inicio',
-        pathMatch: 'full'
+        pathMatch: 'full',
     },
     {
         path: '**',
-        component: NoEncontradoComponent
+        component: NoEncontradoComponent,
 
     }
 ];
 @NgModule({
     imports: [RouterModule.forRoot(rutas)],
+    providers: [],
+    declarations: [],
     exports: [RouterModule]
 })
 
