@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/Router';
 import { HomeComponent } from './home/home.component';
 import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
 import { LoginComponent } from './login/login.component';
+import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
 const rutas: Routes = [
     {
         path: 'inicio',
@@ -12,6 +13,14 @@ const rutas: Routes = [
     {
         path: 'iniciar-sesion',
         component: IniciarSesionComponent,
+    },
+    {
+        path: 'estudiante/perfil',
+        component: PerfilUsuarioComponent,
+    },
+    {
+        path: 'profesor/perfil',
+        component: PerfilUsuarioComponent,
     },
     {
         path: 'login',
@@ -29,13 +38,8 @@ const rutas: Routes = [
 ];
 
 @NgModule({
-    imports: [
-        RouterModule
-            .forRoot(rutas)
-    ],
+    imports: [RouterModule.forRoot(rutas)],
     providers: [],
-    exports: [
-        RouterModule
-    ],
+    exports: [RouterModule],
 })
 export class AppRoutes { }
