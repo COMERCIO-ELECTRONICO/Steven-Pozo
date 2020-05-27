@@ -4,11 +4,10 @@ import { Router } from '@angular/Router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  // credenciales
-
+  //credenciales
   correo = '';
   pass = '';
   seleccionadoValor;
@@ -16,7 +15,9 @@ export class LoginComponent implements OnInit {
   valorAutocomplete = '';
   arregloResultado = [];
   sugerencias = ['Steven', 'roots', 'juan'];
-  constructor(private readonly _router: Router, ) { }
+  constructor(
+    private readonly _router: Router,
+  ) { }
 
   ngOnInit(): void { }
 
@@ -30,7 +31,7 @@ export class LoginComponent implements OnInit {
       this.arregloResultado.push(valorEncontrado);
       this.sugerencias = this.arregloResultado;
     } else {
-      this.sugerencias = ['Estudiante', 'Profesor', 'juan'];
+      this.sugerencias = ['Steven', 'roots', 'juan'];
     }
     /*this.sugerencias
     = ['hola'];*/
@@ -40,20 +41,21 @@ export class LoginComponent implements OnInit {
     console.log(evento);
     this.seleccionadoValor = evento;
   }
-
+  info() {
+    ['./usuario/usuario.module']
+  }
   ingresar() {
     console.log(this.valorAutocomplete);
 
     if (this.pass === '1234') {
       alert(this.correo);
-      if (this.seleccionadoValor === 'Estudiante') {
+      if (this.seleccionadoValor === 'Steven') {
         alert('es estudiante');
         this._router.navigate(
           ['/estudiante', 'perfil']
         )
       }
-    } if (this.pass === '1234') {
-      if (this.seleccionadoValor === 'Profesor') {
+      if (this.seleccionadoValor === 'roots') {
         alert('es profesor');
         this._router.navigate(
           ['/profesor', 'perfil']
