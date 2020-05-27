@@ -1,15 +1,38 @@
-<br><br><br><br><br><br><br>
 <div class="container">
-    <div style="text-align:center;">
-        <div class="login">
-            <h1>Login</h1>
-            <form method="post">
-                <input type="text" name="u" placeholder="Username" required="required" /><br><br>
-                <input type="password" name="p" placeholder="Password" required="required" /><br><br>
-                <button type="submit" class="btn btn-primary">INGRESAR</button>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <p-autoComplete [(ngModel)]="valorAutocomplete" [suggestions]="sugerencias"
+                (completeMethod)="buscarSugerencia($event)" [dropdown]="true" (onSelect)="valorSeleccionado($event)">
+            </p-autoComplete>
+
+            <form class="example-form">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Correo</mat-label>
+                    <input matInput placeholder="xxxx@xxxx.com" required [(ngModel)]="correo" name="correo">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Contraseña</mat-label>
+                    <input type="password" matInput required placeholder="******" [(ngModel)]="pass" name="pass">
+                </mat-form-field>
             </form>
         </div>
-
-
+        <div class="col-sm-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <button class="btn
+        btn-outline-success
+        btn-block" (click)="ingresar()">
+                Ingresar
+            </button>
+        </div>
+        <div class="col-sm-12">
+            <button class="btn
+        btn-outline-success
+        btn-block">
+                Crear
+            </button>
+        </div>
     </div>
 </div>

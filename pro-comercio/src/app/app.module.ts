@@ -10,23 +10,37 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutes } from './app.routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { PerfilUsuarioComponent } from './perfil-usuario/perfil-usuario.component';
+import { UsuarioModule } from './usuario/usuario.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    NoEncontradoComponent,
     IniciarSesionComponent,
     LoginComponent,
-    NoEncontradoComponent
+    PerfilUsuarioComponent
+
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
+    AppRoutes,
+    BrowserAnimationsModule,//Ruta dinamica
     ButtonModule,
-    AppRoutes
+    FormsModule,
+    MatInputModule,
+    AutoCompleteModule,
+    UsuarioModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+
